@@ -12,7 +12,14 @@ jobs:
               run: |
                     echo "Printing folders in the repository"
                     ls
-
+            - name: setup node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 20
+            - name: install dependencies
+              run: |
+                    echo "Installing dependencies"
+                    npm ci
 
         # checkout the repository
         # Install deps of our react application
