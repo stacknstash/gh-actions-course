@@ -11,7 +11,7 @@ jobs:
             - name: Printing folders
               run: |
                     echo "Printing folders in the repository"
-                    ls -al  
+                    ls
 
 
         # checkout the repository
