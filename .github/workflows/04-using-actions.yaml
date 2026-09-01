@@ -18,7 +18,7 @@ jobs:
                 node-version: 20
             - name: install dependencies
               run:  npm ci
-              working-directory: 04-using-actions/react-app
+              working-directory: gh-action-course\04-using-actions\react-app
 
         # checkout the repository
         # Install deps of our react application
