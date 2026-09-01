@@ -17,9 +17,7 @@ jobs:
               with:
                 node-version: 20
             - name: install dependencies
-              run: |
-                    echo "Installing dependencies"
-                    npm ci
+              run:  npm ci
               working-directory: 04-using-actions/react-app
 
         # checkout the repository
