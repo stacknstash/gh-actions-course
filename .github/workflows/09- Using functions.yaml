@@ -17,7 +17,7 @@ jobs:
               if : ${{ failure() }}
               run: echo "I will print if previous step failed"
             - name: I will execute
-              if: !${{ cancelled() }}
+              if: ${{ !cancelled() }}
               run: echo " I will always print, except if cancelled"
             - name: I will execute
               if : ${{ cancelled() }}
