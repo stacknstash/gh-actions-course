@@ -1,0 +1,24 @@
+name: 09 - Using functions
+
+on:
+    pull_request:
+    workflow_dispatch:
+
+jobs:
+    echo1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Failing step
+              run: exit 1
+            - name: i will be skipped
+              if: ${{ success() }}
+              run: echo "i will be print if previous step succeeded"
+            - name: I will execute
+              if : ${{ failure() }}
+              run: echo "I will print if previous step failed"
+            - name: I will execute
+              if: !${{ cancelled() }}
+              run: echo " I will always print, except if cancelled"
+            - name: I will execute
+              if : ${{ cancelled() }}
+              run : echo "I will print if workflow is cancelled"
