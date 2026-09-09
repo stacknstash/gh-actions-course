@@ -38,7 +38,7 @@ jobs:
               uses: actions/cache@v3
               id: cache
               with:
-                path: 13-caching/react-app/node_modules
+                path: .github/13-caching/react-app/node_modules
                 key: deps-node-modules-${{ hashFiles('13-caching/react-app/package-lock.json') }}
             - name: Install dependencies
               if: ${{ inputs.use-cache && steps.cache.outputs.cache-hit != 'true' }}
